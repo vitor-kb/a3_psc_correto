@@ -82,7 +82,7 @@ public class TelaInicial extends javax.swing.JFrame {
         Emergencia emg = new Emergencia();
         emg.show();
         setVisible(false);
-    }                                         
+    }
 
     /**
      * @param args the command line arguments
