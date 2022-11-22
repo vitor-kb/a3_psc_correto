@@ -65,26 +65,12 @@ public class TelaLigar extends javax.swing.JFrame {
 
     private void btn_ligarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ligarActionPerformed
         Config cfg = new Config();
-        DataTela data = new DataTela();
         TelaInicial telinha = new TelaInicial();
         telinha.show();
         setVisible(false);
     }//GEN-LAST:event_btn_ligarActionPerformed
 
     public static void main(String args[]) {
-        
-        Calendar c = Calendar.getInstance();
-        
-        int mes = c.get(Calendar.MONTH ) + 1;
-        
-        
-        System.out.println("Dia: "+c.get(Calendar.DAY_OF_MONTH));
-        System.out.println("Mes: "+mes);
-        System.out.println("Ano: "+c.get(Calendar.YEAR));
-        
-        System.out.println("\nHora: "+c.get(Calendar.HOUR_OF_DAY));
-        System.out.println("Minuto: "+c.get(Calendar.MINUTE));
-        
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

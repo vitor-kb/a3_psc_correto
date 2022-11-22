@@ -1,5 +1,7 @@
 package TelaVIEW;
 
+import Config.Config;
+
 public class TelaInicial extends javax.swing.JFrame {
 
     /**
@@ -20,17 +22,27 @@ public class TelaInicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        txt_emerg = new javax.swing.JButton();
+        btn_ligar = new javax.swing.JButton();
+        btn_tec_num = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(320, 550));
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        txt_emerg.setText("Emergencia");
+        txt_emerg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                txt_emergActionPerformed(evt);
             }
         });
+
+        btn_ligar.setText("Ligar");
+        btn_ligar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ligarActionPerformed(evt);
+            }
+        });
+
+        btn_tec_num.setText("Teclado Numerico");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -38,23 +50,39 @@ public class TelaInicial extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addComponent(jButton1)
-                .addContainerGap(206, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_ligar)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txt_emerg)
+                        .addGap(58, 58, 58)
+                        .addComponent(btn_tec_num)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(85, 85, 85)
-                .addComponent(jButton1)
-                .addContainerGap(442, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_emerg)
+                    .addComponent(btn_tec_num))
+                .addGap(31, 31, 31)
+                .addComponent(btn_ligar)
+                .addContainerGap(388, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_ligarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ligarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn_ligarActionPerformed
+
+    private void txt_emergActionPerformed(java.awt.event.ActionEvent evt) {
+        Config cfg = new Config();
+        Emergencia emg = new Emergencia();
+        emg.show();
+        setVisible(false);
+    }                                         
 
     /**
      * @param args the command line arguments
@@ -92,6 +120,8 @@ public class TelaInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_ligar;
+    private javax.swing.JButton btn_tec_num;
+    private javax.swing.JButton txt_emerg;
     // End of variables declaration//GEN-END:variables
 }

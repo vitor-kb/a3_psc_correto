@@ -9,7 +9,7 @@ public class Config {
     private int teclado_numerico; // realizar ligações
     private int emergencia; // ligar para a emergencia
     private String mensagem;// enviar mensagens para os contatos
-    private String[] contatos = {"Vitor", "Raul", "Matheus", "Leandro"};
+    private String[] contatos = {"Vitor", "Raul", "Matheus", "Leandro","Biel"};
     //private long numeros[] = new long[5];
     private String escolha;
 
