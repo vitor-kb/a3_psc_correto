@@ -7,7 +7,7 @@ public class Config {
     Atributos*/
     private int id;
     private int teclado_numerico; // realizar ligações
-    private int emergencia; // ligar para a emergencia
+    private int emergencia = 190; // ligar para a emergencia
     private String mensagem;// enviar mensagens para os contatos
     private String[] contatos = {"Vitor", "Raul", "Matheus", "Leandro","Biel"};
     //private long numeros[] = new long[5];
