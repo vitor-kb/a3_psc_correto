@@ -1,6 +1,5 @@
 package Config;
 
-import Config.Config;
 import java.util.Scanner;
 
 public class A3_teste {
