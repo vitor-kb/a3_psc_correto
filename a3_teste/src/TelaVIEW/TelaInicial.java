@@ -80,7 +80,7 @@ public class TelaInicial extends javax.swing.JFrame {
     private void txt_emergActionPerformed(java.awt.event.ActionEvent evt) {
         Config cfg = new Config();
         Emergencia emg = new Emergencia();
-        emg.show();
+        emg.setVisible(true);
         setVisible(false);
     }
 

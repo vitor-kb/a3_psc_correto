@@ -66,7 +66,7 @@ public class TelaLigar extends javax.swing.JFrame {
     private void btn_ligarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ligarActionPerformed
         Config cfg = new Config();
         TelaInicial telinha = new TelaInicial();
-        telinha.show();
+        telinha.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_btn_ligarActionPerformed
 
