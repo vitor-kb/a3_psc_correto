@@ -39,13 +39,15 @@
                       <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="botaoPoli" pref="186" max="32767" attributes="0"/>
+                              <Component id="botaoPoli" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                           </Group>
                           <Component id="btn_poli" alignment="1" min="-2" pref="180" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="btn_voltar_emerg" min="-2" pref="55" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="lbl_serv" min="-2" pref="441" max="-2" attributes="0"/>
                   </Group>
@@ -58,8 +60,11 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Component id="lbl_serv" min="-2" pref="131" max="-2" attributes="0"/>
-              <EmptySpace pref="41" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lbl_serv" min="-2" pref="131" max="-2" attributes="0"/>
+                  <Component id="btn_voltar_emerg" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="39" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="botaoAmbu" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Component id="botaoPoli" alignment="1" min="-2" pref="177" max="-2" attributes="0"/>
@@ -88,6 +93,9 @@
           <Color id="Hand Cursor"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoPoliActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lbl_serv">
       <Properties>
@@ -118,6 +126,14 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Pol&#xed;cia"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn_voltar_emerg">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&lt;--"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_voltar_emergActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

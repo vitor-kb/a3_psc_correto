@@ -22,27 +22,32 @@ public class TelaInicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txt_emerg = new javax.swing.JButton();
-        btn_ligar = new javax.swing.JButton();
         btn_tec_num = new javax.swing.JButton();
+        btn_contatos = new javax.swing.JButton();
+        btn_emerg = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        txt_emerg.setText("Emergencia");
-        txt_emerg.addActionListener(new java.awt.event.ActionListener() {
+        btn_tec_num.setText("Tec. Nu");
+        btn_tec_num.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_emergActionPerformed(evt);
+                btn_tec_numActionPerformed(evt);
             }
         });
 
-        btn_ligar.setText("Ligar");
-        btn_ligar.addActionListener(new java.awt.event.ActionListener() {
+        btn_contatos.setText("Contatos");
+        btn_contatos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_ligarActionPerformed(evt);
+                btn_contatosActionPerformed(evt);
             }
         });
 
-        btn_tec_num.setText("Teclado Numerico");
+        btn_emerg.setText("Emerg.");
+        btn_emerg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_emergActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -50,12 +55,13 @@ public class TelaInicial extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_ligar)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(txt_emerg)
-                        .addGap(58, 58, 58)
-                        .addComponent(btn_tec_num)))
+                .addComponent(btn_emerg)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addComponent(btn_tec_num, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(119, 119, 119)
+                .addComponent(btn_contatos)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -63,26 +69,33 @@ public class TelaInicial extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(85, 85, 85)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_emerg)
-                    .addComponent(btn_tec_num))
-                .addGap(31, 31, 31)
-                .addComponent(btn_ligar)
-                .addContainerGap(388, Short.MAX_VALUE))
+                    .addComponent(btn_tec_num)
+                    .addComponent(btn_emerg))
+                .addGap(29, 29, 29)
+                .addComponent(btn_contatos)
+                .addContainerGap(390, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_ligarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ligarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_ligarActionPerformed
+    private void btn_contatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_contatosActionPerformed
 
-    private void txt_emergActionPerformed(java.awt.event.ActionEvent evt) {
+    }//GEN-LAST:event_btn_contatosActionPerformed
+
+    private void btn_emergActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_emergActionPerformed
         Config cfg = new Config();
         Emergencia emg = new Emergencia();
         emg.setVisible(true);
         setVisible(false);
-    }
+    }//GEN-LAST:event_btn_emergActionPerformed
+
+    private void btn_tec_numActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tec_numActionPerformed
+        celular_ligacao tec_num = new celular_ligacao();
+        tec_num.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_tec_numActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -120,8 +133,8 @@ public class TelaInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_ligar;
+    private javax.swing.JButton btn_contatos;
+    private javax.swing.JButton btn_emerg;
     private javax.swing.JButton btn_tec_num;
-    private javax.swing.JButton txt_emerg;
     // End of variables declaration//GEN-END:variables
 }

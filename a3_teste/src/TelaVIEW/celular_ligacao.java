@@ -1,5 +1,7 @@
 package TelaVIEW;
 
+import Config.Config;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -44,6 +46,7 @@ public class celular_ligacao extends javax.swing.JFrame {
         txt_digNum = new javax.swing.JTextField();
         btn_apagar = new javax.swing.JButton();
         btn_ligar = new javax.swing.JButton();
+        btn_voltar_ligacao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(28, 28));
@@ -181,12 +184,21 @@ public class celular_ligacao extends javax.swing.JFrame {
             }
         });
 
+        btn_voltar_ligacao.setText("<--");
+        btn_voltar_ligacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_voltar_ligacaoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 79, Short.MAX_VALUE)
+                .addGap(0, 18, Short.MAX_VALUE)
+                .addComponent(btn_voltar_ligacao, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txt_digNum, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -219,10 +231,15 @@ public class celular_ligacao extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_digNum, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_apagar, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_digNum, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_apagar, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_voltar_ligacao)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -309,13 +326,20 @@ public class celular_ligacao extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_digNumActionPerformed
 
+    private void btn_ligarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ligarActionPerformed
+        
+    }//GEN-LAST:event_btn_ligarActionPerformed
+
     private void btn_apagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_apagarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_apagarActionPerformed
 
-    private void btn_ligarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ligarActionPerformed
-        
-    }//GEN-LAST:event_btn_ligarActionPerformed
+    private void btn_voltar_ligacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_voltar_ligacaoActionPerformed
+        Config cfg = new Config();
+        TelaInicial back_btn = new TelaInicial();
+        back_btn.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_voltar_ligacaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -367,6 +391,7 @@ public class celular_ligacao extends javax.swing.JFrame {
     private javax.swing.JButton btn_ast;
     private javax.swing.JButton btn_hashtag;
     private javax.swing.JButton btn_ligar;
+    private javax.swing.JButton btn_voltar_ligacao;
     private javax.swing.JTextField txt_digNum;
     // End of variables declaration//GEN-END:variables
 }
