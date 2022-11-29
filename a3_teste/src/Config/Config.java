@@ -6,7 +6,7 @@ public class Config {
     
     Atributos*/
     private int id;
-    private String senha_usuario = "3567";
+    private String senha_usuario;
     private int teclado_numerico; // realizar ligações
     private int emergencia = 190; // ligar para a emergencia
     private String mensagem;// enviar mensagens para os contatos
@@ -60,9 +60,13 @@ public class Config {
     public void setEscolha(String escolha) {
         this.escolha = escolha;
     }
-    
+
     public String getSenha_usuario() {
         return senha_usuario;
+    }
+
+    public void setSenha_usuario(String senha_usuario) {
+        this.senha_usuario = senha_usuario;
     }
 
     //Construtores    

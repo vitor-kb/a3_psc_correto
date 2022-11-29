@@ -36,6 +36,12 @@ public class VerificaSenha extends javax.swing.JFrame {
             }
         });
 
+        pf_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pf_1ActionPerformed(evt);
+            }
+        });
+
         lbl_titulo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lbl_titulo.setText("Digite sua senha");
 
@@ -74,18 +80,26 @@ public class VerificaSenha extends javax.swing.JFrame {
         try {
             Login log = new Login();
             Config cfg = new Config();
-            ResultSet rslog = log.autenticarUsuario(cfg);
-            if (rslog.next()) {
-                TelaInicial tela = new TelaInicial();
-                tela.setVisible(true);
-                dispose();
-            } else {
-                JOptionPane.showMessageDialog(null, "Usuário ou Senha Inválido");
+            cfg.setSenha_usuario("3567");
+            if (pf_1.getText().equals(cfg.getSenha_usuario())) {
+                ResultSet rslog = log.autenticarUsuario(cfg);
+                if (rslog.next()) {
+                    TelaInicial tela = new TelaInicial();
+                    tela.setVisible(true);
+                    dispose();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Senha Inválida");
+                }
             }
+
         } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null, "Erro LoginVIEW: " + erro);
+            JOptionPane.showMessageDialog(null, "Erro de Login: " + erro);
         }
     }//GEN-LAST:event_btn_entrarActionPerformed
+
+    private void pf_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pf_1ActionPerformed
+
+    }//GEN-LAST:event_pf_1ActionPerformed
 
     /**
      * @param args the command line arguments
