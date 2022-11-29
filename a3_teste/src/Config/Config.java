@@ -9,13 +9,8 @@ public class Config {
     private int teclado_numerico; // realizar ligações
     private int emergencia = 190; // ligar para a emergencia
     private String mensagem;// enviar mensagens para os contatos
-    private String[] contatos = {"Vitor", "Raul", "Matheus", "Leandro","Biel"};
     //private long numeros[] = new long[5];
     private String escolha;
-
-    public String[] getContatos() {
-        return contatos;
-    }
 
     /*public long[] getNumeros() {
         return numeros;
@@ -24,7 +19,6 @@ public class Config {
     public void setNumeros(long[] numeros) {
         this.numeros = numeros;
     }*/
-
     //Metodos acessores
     public int getId() {
         return id;
@@ -57,7 +51,7 @@ public class Config {
     public void setMensagem(String mensagem) {
         this.mensagem = mensagem;
     }
-    
+
     public String getEscolha() {
         return escolha;
     }
@@ -66,8 +60,5 @@ public class Config {
         this.escolha = escolha;
     }
 
-    //Construtores
-
-    
-
+    //Construtores    
 }

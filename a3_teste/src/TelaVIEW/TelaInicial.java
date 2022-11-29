@@ -11,6 +11,7 @@ public class TelaInicial extends javax.swing.JFrame {
         initComponents();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        setTitle("Inicio");
     }
 
     /**
@@ -25,6 +26,7 @@ public class TelaInicial extends javax.swing.JFrame {
         btn_tec_num = new javax.swing.JButton();
         btn_contatos = new javax.swing.JButton();
         btn_emerg = new javax.swing.JButton();
+        btn_msg = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,20 +51,27 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
+        btn_msg.setText("Mensagem");
+        btn_msg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_msgActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
-                .addComponent(btn_emerg)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
-                .addComponent(btn_tec_num, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_contatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_emerg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_msg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_tec_num, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(35, 35, 35))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(119, 119, 119)
-                .addComponent(btn_contatos)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -71,16 +80,21 @@ public class TelaInicial extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_tec_num)
                     .addComponent(btn_emerg))
-                .addGap(29, 29, 29)
-                .addComponent(btn_contatos)
-                .addContainerGap(390, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_contatos)
+                    .addComponent(btn_msg))
+                .addContainerGap(391, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_contatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_contatosActionPerformed
-
+        Config cfg = new Config();
+        tela_contatos ctt = new tela_contatos();
+        ctt.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_btn_contatosActionPerformed
 
     private void btn_emergActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_emergActionPerformed
@@ -96,6 +110,11 @@ public class TelaInicial extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_btn_tec_numActionPerformed
 
+    private void btn_msgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_msgActionPerformed
+        Mensagem msg = new Mensagem();
+        msg.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btn_msgActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,6 +154,7 @@ public class TelaInicial extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_contatos;
     private javax.swing.JButton btn_emerg;
+    private javax.swing.JButton btn_msg;
     private javax.swing.JButton btn_tec_num;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,7 +1,14 @@
 package TelaVIEW;
 
-import Config.Config;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 
+/**
+ *
+ * @author conta
+ */
 public class Emergencia extends javax.swing.JFrame {
 
     /**
@@ -9,8 +16,8 @@ public class Emergencia extends javax.swing.JFrame {
      */
     public Emergencia() {
         initComponents();
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        setTitle("Emergencia");
     }
 
     /**
@@ -24,37 +31,37 @@ public class Emergencia extends javax.swing.JFrame {
 
         botaoAmbu = new javax.swing.JButton();
         botaoPoli = new javax.swing.JButton();
-        lbl_serv = new javax.swing.JLabel();
-        btn_Ambu = new javax.swing.JLabel();
-        btn_poli = new javax.swing.JLabel();
-        btn_voltar_emerg = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        letrAmbu = new javax.swing.JLabel();
+        letrPoli = new javax.swing.JLabel();
+        btn_voltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        botaoAmbu.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\e911_emergency_FILL0_wght400_GRAD0_opsz48.png")); // NOI18N
         botaoAmbu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        botaoPoli.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\iconpoli.png")); // NOI18N
         botaoPoli.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botaoPoli.addActionListener(new java.awt.event.ActionListener() {
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Para qual serviço deseja ligar ?");
+
+        letrAmbu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        letrAmbu.setForeground(new java.awt.Color(255, 0, 0));
+        letrAmbu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        letrAmbu.setText("Ambulância");
+
+        letrPoli.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        letrPoli.setForeground(new java.awt.Color(0, 0, 255));
+        letrPoli.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        letrPoli.setText("Polícia");
+
+        btn_voltar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\icon_voltar.png")); // NOI18N
+        btn_voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoPoliActionPerformed(evt);
-            }
-        });
-
-        lbl_serv.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        lbl_serv.setText("Para qual serviço deseja ligar ?");
-
-        btn_Ambu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btn_Ambu.setForeground(new java.awt.Color(255, 0, 0));
-        btn_Ambu.setText("Ambulância");
-
-        btn_poli.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btn_poli.setForeground(new java.awt.Color(0, 0, 255));
-        btn_poli.setText("Polícia");
-
-        btn_voltar_emerg.setText("<--");
-        btn_voltar_emerg.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_voltar_emergActionPerformed(evt);
+                btn_voltarActionPerformed(evt);
             }
         });
 
@@ -63,59 +70,49 @@ public class Emergencia extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addContainerGap()
+                .addComponent(btn_voltar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(81, 81, 81)
-                                .addComponent(botaoAmbu))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(114, 114, 114)
-                                .addComponent(btn_Ambu, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(58, 58, 58)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(botaoPoli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(51, 51, 51))
-                            .addComponent(btn_poli, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(btn_voltar_emerg, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(letrAmbu, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+                            .addComponent(botaoAmbu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lbl_serv, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(28, 28, 28))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botaoPoli)
+                            .addComponent(letrPoli, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 30, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_serv, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_voltar_emerg))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(botaoAmbu, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(botaoPoli, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_voltar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(botaoPoli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botaoAmbu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_Ambu, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_poli, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(letrAmbu, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(letrPoli, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botaoPoliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoPoliActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoPoliActionPerformed
-
-    private void btn_voltar_emergActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_voltar_emergActionPerformed
-        Config cfg = new Config();
-        TelaInicial back_btn = new TelaInicial();
-        back_btn.setVisible(true);
+    private void btn_voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_voltarActionPerformed
+        TelaInicial tela = new TelaInicial();
+        tela.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_btn_voltar_emergActionPerformed
+    }//GEN-LAST:event_btn_voltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,9 +152,9 @@ public class Emergencia extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoAmbu;
     private javax.swing.JButton botaoPoli;
-    private javax.swing.JLabel btn_Ambu;
-    private javax.swing.JLabel btn_poli;
-    private javax.swing.JButton btn_voltar_emerg;
-    private javax.swing.JLabel lbl_serv;
+    private javax.swing.JButton btn_voltar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel letrAmbu;
+    private javax.swing.JLabel letrPoli;
     // End of variables declaration//GEN-END:variables
 }

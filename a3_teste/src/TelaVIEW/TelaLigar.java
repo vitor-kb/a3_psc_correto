@@ -8,6 +8,7 @@ public class TelaLigar extends javax.swing.JFrame {
         initComponents();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        setTitle("Ligar Celular");
     }
 
     /**

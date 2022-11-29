@@ -24,35 +24,27 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btn_voltar" min="-2" pref="48" max="-2" attributes="0"/>
+              <EmptySpace pref="41" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                              <Component id="botaoAmbu" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
-                              <Component id="btn_Ambu" min="-2" pref="186" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="letrAmbu" pref="186" max="32767" attributes="0"/>
+                          <Component id="botaoAmbu" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="botaoPoli" max="32767" attributes="0"/>
-                              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="btn_poli" alignment="1" min="-2" pref="180" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="btn_voltar_emerg" min="-2" pref="55" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="lbl_serv" min="-2" pref="441" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="botaoPoli" min="-2" max="-2" attributes="0"/>
+                          <Component id="letrPoli" min="-2" pref="180" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel1" min="-2" pref="441" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="30" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -61,18 +53,18 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbl_serv" min="-2" pref="131" max="-2" attributes="0"/>
-                  <Component id="btn_voltar_emerg" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" pref="131" max="-2" attributes="0"/>
+                  <Component id="btn_voltar" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="39" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="botaoAmbu" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="botaoPoli" alignment="1" min="-2" pref="177" max="-2" attributes="0"/>
+              <EmptySpace pref="29" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="botaoPoli" max="32767" attributes="0"/>
+                  <Component id="botaoAmbu" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btn_Ambu" alignment="3" min="-2" pref="83" max="-2" attributes="0"/>
-                  <Component id="btn_poli" alignment="3" min="-2" pref="83" max="-2" attributes="0"/>
+                  <Component id="letrAmbu" alignment="3" min="-2" pref="83" max="-2" attributes="0"/>
+                  <Component id="letrPoli" alignment="3" min="-2" pref="83" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
           </Group>
@@ -82,6 +74,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="botaoAmbu">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="2" name="C:\Users\Vitor\Desktop\a3_psc\a3_teste\src\ICONS\e911_emergency_FILL0_wght400_GRAD0_opsz48.png"/>
+        </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Hand Cursor"/>
         </Property>
@@ -89,23 +84,24 @@
     </Component>
     <Component class="javax.swing.JButton" name="botaoPoli">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="2" name="C:\Users\Vitor\Desktop\a3_psc\a3_teste\src\ICONS\iconpoli.png"/>
+        </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Hand Cursor"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoPoliActionPerformed"/>
-      </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl_serv">
+    <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="24" style="1"/>
         </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Para qual servi&#xe7;o deseja ligar ?"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="btn_Ambu">
+    <Component class="javax.swing.JLabel" name="letrAmbu">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="24" style="1"/>
@@ -113,10 +109,11 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="ff" type="rgb"/>
         </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Ambul&#xe2;ncia"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="btn_poli">
+    <Component class="javax.swing.JLabel" name="letrPoli">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="24" style="1"/>
@@ -124,15 +121,18 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="0" red="0" type="rgb"/>
         </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Pol&#xed;cia"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btn_voltar_emerg">
+    <Component class="javax.swing.JButton" name="btn_voltar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&lt;--"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="2" name="C:\Users\Vitor\Desktop\a3_psc\a3_teste\src\ICONS\icon_voltar.png"/>
+        </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_voltar_emergActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_voltarActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
