@@ -81,7 +81,7 @@ public class VerificaSenha extends javax.swing.JFrame {
             Login log = new Login();
             Config cfg = new Config();
             cfg.setSenha_usuario("3567");
-            if (pf_1.getText().equals(cfg.getSenha_usuario())) {
+            if (pf_1.getPassword().equals(cfg.getSenha_usuario())) {
                 ResultSet rslog = log.autenticarUsuario(cfg);
                 if (rslog.next()) {
                     TelaInicial tela = new TelaInicial();
