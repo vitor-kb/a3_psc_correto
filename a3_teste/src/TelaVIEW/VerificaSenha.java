@@ -12,6 +12,7 @@ public class VerificaSenha extends javax.swing.JFrame {
     public VerificaSenha() {
         initComponents();
         setLocationRelativeTo(null);
+        setTitle("Senha");
     }
 
     /**
