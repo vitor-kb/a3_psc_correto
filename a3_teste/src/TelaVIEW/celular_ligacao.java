@@ -1,8 +1,11 @@
 package TelaVIEW;
 
+import java.util.Calendar;
+
 public class celular_ligacao extends javax.swing.JFrame {
 
     Ligacao enviatexto;
+    TelaInicial enviaHorario;
 
     /**
      * Creates new form celular_ligacao
@@ -154,8 +157,14 @@ public class celular_ligacao extends javax.swing.JFrame {
         camponum.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         camponum.setForeground(new java.awt.Color(0, 0, 0));
 
+        botaoapag.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\iconapag.png")); // NOI18N
         botaoapag.setActionCommand("iconapag");
         botaoapag.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoapag.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoapagActionPerformed(evt);
+            }
+        });
 
         botaolig.setForeground(new java.awt.Color(51, 153, 255));
         botaolig.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\call_FILL0_wght400_GRAD0_opsz48.png")); // NOI18N
@@ -180,7 +189,7 @@ public class celular_ligacao extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btn_voltar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(camponum, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -264,9 +273,14 @@ public class celular_ligacao extends javax.swing.JFrame {
     }//GEN-LAST:event_botao1ActionPerformed
 
     private void btn_voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_voltarActionPerformed
-        TelaInicial tela = new TelaInicial();
-        tela.setVisible(true);
-        setVisible(false);
+        if (enviaHorario == null) {
+            enviaHorario = new TelaInicial();
+            Calendar c = Calendar.getInstance();
+            enviaHorario.recebeHorario(c.get(Calendar.HOUR_OF_DAY) + ":" + String.valueOf(c.get(Calendar.MINUTE)));
+            enviaHorario.setVisible(true);
+            setVisible(false);
+        }
+
     }//GEN-LAST:event_btn_voltarActionPerformed
 
     private void botao2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao2ActionPerformed
@@ -317,6 +331,10 @@ public class celular_ligacao extends javax.swing.JFrame {
             setVisible(false);
         }
     }//GEN-LAST:event_botaoligActionPerformed
+
+    private void botaoapagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoapagActionPerformed
+        camponum.setText("");
+    }//GEN-LAST:event_botaoapagActionPerformed
 
     /**
      * @param args the command line arguments

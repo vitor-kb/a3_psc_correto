@@ -3,12 +3,12 @@ package TelaVIEW;
 import Config.*;
 import java.sql.*;
 import javax.swing.JOptionPane;
+import java.util.Calendar;
 
 public class VerificaSenha extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VerificaSenha
-     */
+    TelaInicial enviaHorario;
+
     public VerificaSenha() {
         initComponents();
         setLocationRelativeTo(null);
@@ -78,6 +78,11 @@ public class VerificaSenha extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_entrarActionPerformed
+        if (enviaHorario == null) {
+            enviaHorario = new TelaInicial();
+            Calendar c = Calendar.getInstance();
+            enviaHorario.recebeHorario(c.get(Calendar.HOUR_OF_DAY) + ":" + String.valueOf(c.get(Calendar.MINUTE)));
+        }
         try {
             Login log = new Login();
             Config cfg = new Config();
@@ -85,8 +90,7 @@ public class VerificaSenha extends javax.swing.JFrame {
             if (pf_1.getText().equals(cfg.getSenha_usuario())) {
                 ResultSet rslog = log.autenticarUsuario(cfg);
                 if (rslog.next()) {
-                    TelaInicial tela = new TelaInicial();
-                    tela.setVisible(true);
+                    enviaHorario.setVisible(true);
                     dispose();
                 } else {
                     JOptionPane.showMessageDialog(null, "Senha Inválida");
@@ -96,6 +100,8 @@ public class VerificaSenha extends javax.swing.JFrame {
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null, "Erro de Login: " + erro);
         }
+
+
     }//GEN-LAST:event_btn_entrarActionPerformed
 
     private void pf_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pf_1ActionPerformed

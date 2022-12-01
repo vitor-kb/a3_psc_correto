@@ -1,19 +1,22 @@
 package TelaVIEW;
 
+import Config.Config;
+import java.util.Calendar;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author conta
  */
 public class Emergencia extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Emergencia
-     */
+    Ligacao ligapolicia;
+    Ligacao ligasamu;
+    TelaInicial enviaHorario;
+
     public Emergencia() {
         initComponents();
         setLocationRelativeTo(null);
@@ -38,11 +41,21 @@ public class Emergencia extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        botaoAmbu.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\e911_emergency_FILL0_wght400_GRAD0_opsz48.png")); // NOI18N
+        botaoAmbu.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\iconambu.png")); // NOI18N
         botaoAmbu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoAmbu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoAmbuActionPerformed(evt);
+            }
+        });
 
         botaoPoli.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\iconpoli.png")); // NOI18N
         botaoPoli.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoPoli.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoPoliActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -72,20 +85,19 @@ public class Emergencia extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btn_voltar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(letrAmbu, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
-                            .addComponent(botaoAmbu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(letrAmbu, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(botaoPoli)
-                            .addComponent(letrPoli, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 30, Short.MAX_VALUE))))
+                        .addComponent(letrPoli, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(botaoAmbu)
+                            .addGap(79, 79, 79)
+                            .addComponent(botaoPoli))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 53, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,21 +110,46 @@ public class Emergencia extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(botaoPoli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(botaoAmbu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(47, 47, 47)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(letrAmbu, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(letrPoli, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47))
+                .addGap(76, 76, 76))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_voltarActionPerformed
-        TelaInicial tela = new TelaInicial();
-        tela.setVisible(true);
-        setVisible(false);
+        if (enviaHorario == null) {
+            enviaHorario = new TelaInicial();
+            Calendar c = Calendar.getInstance();
+            enviaHorario.recebeHorario(c.get(Calendar.HOUR_OF_DAY) + ":" + String.valueOf(c.get(Calendar.MINUTE)));
+            enviaHorario.setVisible(true);
+            setVisible(false);
+        }
     }//GEN-LAST:event_btn_voltarActionPerformed
+
+    private void botaoAmbuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAmbuActionPerformed
+        Config cfg = new Config();
+        if (ligasamu == null) {
+            ligasamu = new Ligacao();
+            ligasamu.samu(cfg.getSamu());
+            ligasamu.setVisible(true);
+            setVisible(false);
+        }
+
+    }//GEN-LAST:event_botaoAmbuActionPerformed
+
+    private void botaoPoliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoPoliActionPerformed
+        Config cfg = new Config();
+        if (ligapolicia == null) {
+            ligapolicia = new Ligacao();
+            ligapolicia.policia(cfg.getPolicia());
+            ligapolicia.setVisible(true);
+            setVisible(false);
+        }
+    }//GEN-LAST:event_botaoPoliActionPerformed
 
     /**
      * @param args the command line arguments

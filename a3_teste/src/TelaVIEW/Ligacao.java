@@ -10,12 +10,11 @@ package TelaVIEW;
  */
 public class Ligacao extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Ligacao
-     */
+    
     public Ligacao() {
         initComponents();
         setLocationRelativeTo(null);
+        setTitle("Ligando");
     }
 
     /**
@@ -134,6 +133,12 @@ public class Ligacao extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_num;
     // End of variables declaration//GEN-END:variables
     public void recebendo(String recebe) {
+        lbl_num.setText(recebe);
+    }
+    public void policia(String recebe) {
+        lbl_num.setText(recebe);
+    }
+    public void samu(String recebe) {
         lbl_num.setText(recebe);
     }
 }

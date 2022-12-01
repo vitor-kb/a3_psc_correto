@@ -1,10 +1,11 @@
 package TelaVIEW;
 
+import java.util.Calendar;
+
 public class tela_contatos extends javax.swing.JFrame {
 
-    /**
-     * Creates new form tela_contatos
-     */
+    TelaInicial enviaHorario;
+
     public tela_contatos() {
         initComponents();
         setLocationRelativeTo(null);
@@ -117,8 +118,12 @@ public class tela_contatos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_voltarActionPerformed
-        TelaInicial tela = new TelaInicial();
-        tela.setVisible(true);
+        if (enviaHorario == null) {
+            enviaHorario = new TelaInicial();
+            Calendar c = Calendar.getInstance();
+            enviaHorario.recebeHorario(c.get(Calendar.HOUR_OF_DAY) + ":" + String.valueOf(c.get(Calendar.MINUTE)));
+            enviaHorario.setVisible(true);
+        }
         setVisible(false);
     }//GEN-LAST:event_btn_voltarActionPerformed
 

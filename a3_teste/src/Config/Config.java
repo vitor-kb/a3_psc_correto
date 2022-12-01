@@ -7,7 +7,8 @@ public class Config {
     Atributos*/
     private int id;
     private String senha_usuario;
-    private int emergencia = 190; // ligar para a emergencia
+    private String policia = "190"; // ligar para a policia
+    private String samu = "192";
     private String mensagem;// enviar mensagens para os contatos
     //private long numeros[] = new long[5];
     private String escolha;
@@ -28,12 +29,8 @@ public class Config {
         this.id = id;
     }
 
-    public int getEmergencia() {
-        return emergencia;
-    }
-
-    public void setEmergencia(int emergencia) {
-        this.emergencia = emergencia;
+    public String getPolicia() {
+        return policia;
     }
 
     public String getMensagem() {
@@ -58,6 +55,10 @@ public class Config {
 
     public void setSenha_usuario(String senha_usuario) {
         this.senha_usuario = senha_usuario;
+    }
+
+    public String getSamu() {
+        return samu;
     }
 
     //Construtores    

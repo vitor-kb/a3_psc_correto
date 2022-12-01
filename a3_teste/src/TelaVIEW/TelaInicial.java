@@ -27,64 +27,101 @@ public class TelaInicial extends javax.swing.JFrame {
         btn_contatos = new javax.swing.JButton();
         btn_emerg = new javax.swing.JButton();
         btn_msg = new javax.swing.JButton();
+        lbl_horario = new javax.swing.JLabel();
+        bnt_desligar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btn_tec_num.setText("Tec. Nu");
+        btn_tec_num.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\call_FILL0_wght400_GRAD0_opsz48.png")); // NOI18N
         btn_tec_num.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_tec_numActionPerformed(evt);
             }
         });
 
-        btn_contatos.setText("Contatos");
+        btn_contatos.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\contacts_FILL0_wght400_GRAD0_opsz48.png")); // NOI18N
         btn_contatos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_contatosActionPerformed(evt);
             }
         });
 
-        btn_emerg.setText("Emerg.");
+        btn_emerg.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\btn_sos.png")); // NOI18N
         btn_emerg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_emergActionPerformed(evt);
             }
         });
 
-        btn_msg.setText("Mensagem");
+        btn_msg.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\mail_FILL0_wght400_GRAD0_opsz48.png")); // NOI18N
         btn_msg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_msgActionPerformed(evt);
             }
         });
 
+        lbl_horario.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lbl_horario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl_horario.setText("Horario");
+
+        bnt_desligar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\btn_deslg.png")); // NOI18N
+        bnt_desligar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bnt_desligarActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\5g_FILL0_wght400_GRAD0_opsz48.png")); // NOI18N
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\btn_bateria.png")); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btn_contatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_emerg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btn_msg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_tec_num, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(35, 35, 35))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(btn_emerg)
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bnt_desligar)
+                            .addComponent(btn_tec_num)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btn_contatos)
+                                .addGap(38, 38, 38)
+                                .addComponent(btn_msg)))
+                        .addGap(0, 39, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1))
+                    .addComponent(lbl_horario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(85, 85, 85)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_tec_num)
-                    .addComponent(btn_emerg))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbl_horario)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_emerg)
                     .addComponent(btn_contatos)
                     .addComponent(btn_msg))
-                .addContainerGap(391, Short.MAX_VALUE))
+                .addGap(66, 66, 66)
+                .addComponent(btn_tec_num)
+                .addGap(44, 44, 44)
+                .addComponent(bnt_desligar)
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         pack();
@@ -115,6 +152,10 @@ public class TelaInicial extends javax.swing.JFrame {
         msg.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_btn_msgActionPerformed
+
+    private void bnt_desligarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bnt_desligarActionPerformed
+        dispose();
+    }//GEN-LAST:event_bnt_desligarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,9 +193,16 @@ public class TelaInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bnt_desligar;
     private javax.swing.JButton btn_contatos;
     private javax.swing.JButton btn_emerg;
     private javax.swing.JButton btn_msg;
     private javax.swing.JButton btn_tec_num;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lbl_horario;
     // End of variables declaration//GEN-END:variables
+    public void recebeHorario(String recebe) {
+        lbl_horario.setText(recebe);
+    }
 }
