@@ -7,7 +7,6 @@ public class Config {
     Atributos*/
     private int id;
     private String senha_usuario;
-    private int teclado_numerico; // realizar ligações
     private int emergencia = 190; // ligar para a emergencia
     private String mensagem;// enviar mensagens para os contatos
     //private long numeros[] = new long[5];
@@ -27,14 +26,6 @@ public class Config {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getTeclado_numerico() {
-        return teclado_numerico;
-    }
-
-    public void setTeclado_numerico(int teclado_numerico) {
-        this.teclado_numerico = teclado_numerico;
     }
 
     public int getEmergencia() {

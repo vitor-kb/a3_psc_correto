@@ -1,15 +1,8 @@
 package TelaVIEW;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
-/**
- *
- * @author conta
- */
 public class celular_ligacao extends javax.swing.JFrame {
+
+    Ligacao enviatexto;
 
     /**
      * Creates new form celular_ligacao
@@ -18,6 +11,7 @@ public class celular_ligacao extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setTitle("Ligar");
+
     }
 
     /**
@@ -34,10 +28,10 @@ public class celular_ligacao extends javax.swing.JFrame {
         botao3 = new javax.swing.JButton();
         botao4 = new javax.swing.JButton();
         botao5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        btn_6 = new javax.swing.JButton();
+        btn_7 = new javax.swing.JButton();
+        btn_8 = new javax.swing.JButton();
+        btn_9 = new javax.swing.JButton();
         botaoestrela = new javax.swing.JButton();
         botao0 = new javax.swing.JButton();
         botaohashtag = new javax.swing.JButton();
@@ -61,10 +55,20 @@ public class celular_ligacao extends javax.swing.JFrame {
         botao2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         botao2.setText("2");
         botao2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botao2ActionPerformed(evt);
+            }
+        });
 
         botao3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         botao3.setText("3");
         botao3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botao3ActionPerformed(evt);
+            }
+        });
 
         botao4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         botao4.setText("4");
@@ -78,38 +82,77 @@ public class celular_ligacao extends javax.swing.JFrame {
         botao5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         botao5.setText("5");
         botao5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botao5ActionPerformed(evt);
+            }
+        });
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton6.setText("6");
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btn_6.setText("6");
+        btn_6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_6ActionPerformed(evt);
+            }
+        });
 
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton7.setText("7");
-        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btn_7.setText("7");
+        btn_7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_7ActionPerformed(evt);
+            }
+        });
 
-        jButton8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton8.setText("8");
-        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btn_8.setText("8");
+        btn_8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_8ActionPerformed(evt);
+            }
+        });
 
-        jButton9.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton9.setText("9");
-        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_9.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btn_9.setText("9");
+        btn_9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_9ActionPerformed(evt);
+            }
+        });
 
         botaoestrela.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         botaoestrela.setText("*");
         botaoestrela.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoestrela.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoestrelaActionPerformed(evt);
+            }
+        });
 
         botao0.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         botao0.setText("0");
         botao0.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botao0ActionPerformed(evt);
+            }
+        });
 
         botaohashtag.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         botaohashtag.setText("#");
         botaohashtag.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaohashtag.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaohashtagActionPerformed(evt);
+            }
+        });
 
-        camponum.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        camponum.setForeground(new java.awt.Color(255, 255, 255));
-        camponum.setText("//Numero digitado");
+        camponum.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        camponum.setForeground(new java.awt.Color(0, 0, 0));
 
         botaoapag.setActionCommand("iconapag");
         botaoapag.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -117,6 +160,11 @@ public class celular_ligacao extends javax.swing.JFrame {
         botaolig.setForeground(new java.awt.Color(51, 153, 255));
         botaolig.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\call_FILL0_wght400_GRAD0_opsz48.png")); // NOI18N
         botaolig.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaolig.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoligActionPerformed(evt);
+            }
+        });
 
         btn_voltar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\icon_voltar.png")); // NOI18N
         btn_voltar.addActionListener(new java.awt.event.ActionListener() {
@@ -142,7 +190,7 @@ public class celular_ligacao extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(botao4, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(botao1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_7, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(botaoestrela, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(64, 64, 64)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,12 +199,12 @@ public class celular_ligacao extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(botao2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(botao5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btn_8, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(botao0, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(61, 61, 61)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btn_6, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btn_9, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(botaohashtag, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(botao3, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap())
@@ -182,11 +230,11 @@ public class celular_ligacao extends javax.swing.JFrame {
                         .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(botao4, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn_6, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn_7, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_9, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(botaoestrela, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -196,7 +244,7 @@ public class celular_ligacao extends javax.swing.JFrame {
                         .addGap(30, 30, 30)
                         .addComponent(botao5, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_8, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36)
                         .addComponent(botao0, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(29, 29, 29)
@@ -208,11 +256,11 @@ public class celular_ligacao extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botao4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao4ActionPerformed
-        // TODO add your handling code here:
+        camponum.setText(camponum.getText() + "4");
     }//GEN-LAST:event_botao4ActionPerformed
 
     private void botao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao1ActionPerformed
-        // TODO add your handling code here:
+        camponum.setText(camponum.getText() + "1");
     }//GEN-LAST:event_botao1ActionPerformed
 
     private void btn_voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_voltarActionPerformed
@@ -220,6 +268,55 @@ public class celular_ligacao extends javax.swing.JFrame {
         tela.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_btn_voltarActionPerformed
+
+    private void botao2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao2ActionPerformed
+        camponum.setText(camponum.getText() + "2");
+    }//GEN-LAST:event_botao2ActionPerformed
+
+    private void botao3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao3ActionPerformed
+        camponum.setText(camponum.getText() + "3");
+    }//GEN-LAST:event_botao3ActionPerformed
+
+    private void botao5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao5ActionPerformed
+        camponum.setText(camponum.getText() + "5");
+    }//GEN-LAST:event_botao5ActionPerformed
+
+    private void btn_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_6ActionPerformed
+        camponum.setText(camponum.getText() + "6");
+    }//GEN-LAST:event_btn_6ActionPerformed
+
+    private void btn_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_7ActionPerformed
+        camponum.setText(camponum.getText() + "7");
+    }//GEN-LAST:event_btn_7ActionPerformed
+
+    private void btn_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_8ActionPerformed
+        camponum.setText(camponum.getText() + "8");
+    }//GEN-LAST:event_btn_8ActionPerformed
+
+    private void btn_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_9ActionPerformed
+        camponum.setText(camponum.getText() + "9");
+    }//GEN-LAST:event_btn_9ActionPerformed
+
+    private void botao0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao0ActionPerformed
+        camponum.setText(camponum.getText() + "0");
+    }//GEN-LAST:event_botao0ActionPerformed
+
+    private void botaoestrelaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoestrelaActionPerformed
+        camponum.setText(camponum.getText() + "*");
+    }//GEN-LAST:event_botaoestrelaActionPerformed
+
+    private void botaohashtagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaohashtagActionPerformed
+        camponum.setText(camponum.getText() + "#");
+    }//GEN-LAST:event_botaohashtagActionPerformed
+
+    private void botaoligActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoligActionPerformed
+        if (enviatexto == null) {
+            enviatexto = new Ligacao();
+            enviatexto.recebendo(camponum.getText());
+            enviatexto.setVisible(true);
+            setVisible(false);
+        }
+    }//GEN-LAST:event_botaoligActionPerformed
 
     /**
      * @param args the command line arguments
@@ -267,11 +364,11 @@ public class celular_ligacao extends javax.swing.JFrame {
     private javax.swing.JButton botaoestrela;
     private javax.swing.JButton botaohashtag;
     private javax.swing.JButton botaolig;
+    private javax.swing.JButton btn_6;
+    private javax.swing.JButton btn_7;
+    private javax.swing.JButton btn_8;
+    private javax.swing.JButton btn_9;
     private javax.swing.JButton btn_voltar;
     private javax.swing.JTextField camponum;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     // End of variables declaration//GEN-END:variables
 }
