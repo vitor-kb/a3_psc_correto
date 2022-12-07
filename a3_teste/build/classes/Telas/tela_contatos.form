@@ -88,6 +88,9 @@
           <Dimension value="[214, 55]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_contCreusaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn_contGer">
       <Properties>
@@ -97,11 +100,14 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="2" name="C:\Users\Vitor\Desktop\a3_psc\a3_teste\src\ICONS\icone_pessoa.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Gertrudes  Fisio"/>
+        <Property name="text" type="java.lang.String" value="Gertrudes Fisio"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Hand Cursor"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_contGerActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn_contFilho">
       <Properties>
@@ -119,6 +125,9 @@
           <Dimension value="[214, 55]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_contFilhoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn_contLurdes">
       <Properties>
@@ -136,6 +145,9 @@
           <Dimension value="[214, 55]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_contLurdesActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn_contDroga">
       <Properties>
@@ -153,6 +165,9 @@
           <Dimension value="[214, 55]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_contDrogaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn_voltar">
       <Properties>

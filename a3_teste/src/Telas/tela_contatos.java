@@ -1,10 +1,12 @@
 package Telas;
 
+import Config.*;
 import java.util.Calendar;
 
 public class tela_contatos extends javax.swing.JFrame {
 
     TelaInicial enviaHorario;
+    Ligacao ligaCtt;
 
     public tela_contatos() {
         initComponents();
@@ -36,29 +38,54 @@ public class tela_contatos extends javax.swing.JFrame {
         btn_contCreusa.setText("Dona Creusa");
         btn_contCreusa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_contCreusa.setPreferredSize(new java.awt.Dimension(214, 55));
+        btn_contCreusa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_contCreusaActionPerformed(evt);
+            }
+        });
 
         btn_contGer.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_contGer.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\icone_pessoa.png")); // NOI18N
-        btn_contGer.setText("Gertrudes  Fisio");
+        btn_contGer.setText("Gertrudes Fisio");
         btn_contGer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_contGer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_contGerActionPerformed(evt);
+            }
+        });
 
         btn_contFilho.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_contFilho.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\icone_pessoa.png")); // NOI18N
         btn_contFilho.setText("Clebinho Filho");
         btn_contFilho.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_contFilho.setPreferredSize(new java.awt.Dimension(214, 55));
+        btn_contFilho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_contFilhoActionPerformed(evt);
+            }
+        });
 
         btn_contLurdes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_contLurdes.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\icone_pessoa.png")); // NOI18N
         btn_contLurdes.setText("Lurdes Cabelo 1");
         btn_contLurdes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_contLurdes.setPreferredSize(new java.awt.Dimension(214, 55));
+        btn_contLurdes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_contLurdesActionPerformed(evt);
+            }
+        });
 
         btn_contDroga.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_contDroga.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\icone_pessoa.png")); // NOI18N
         btn_contDroga.setText("Farma Drogasil");
         btn_contDroga.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_contDroga.setPreferredSize(new java.awt.Dimension(214, 55));
+        btn_contDroga.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_contDrogaActionPerformed(evt);
+            }
+        });
 
         btn_voltar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Vitor\\Desktop\\a3_psc\\a3_teste\\src\\ICONS\\icon_voltar.png")); // NOI18N
         btn_voltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -126,6 +153,56 @@ public class tela_contatos extends javax.swing.JFrame {
         }
         setVisible(false);
     }//GEN-LAST:event_btn_voltarActionPerformed
+
+    private void btn_contCreusaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_contCreusaActionPerformed
+        Config cfg = new Config();
+        if(ligaCtt == null){
+            ligaCtt = new Ligacao();
+            ligaCtt.Ctt(cfg.getContatos()[0]);
+            ligaCtt.setVisible(true);
+            setVisible(false);
+        }
+    }//GEN-LAST:event_btn_contCreusaActionPerformed
+
+    private void btn_contGerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_contGerActionPerformed
+        Config cfg = new Config();
+        if(ligaCtt == null){
+            ligaCtt = new Ligacao();
+            ligaCtt.Ctt(cfg.getContatos()[1]);
+            ligaCtt.setVisible(true);
+            setVisible(false);
+        }
+    }//GEN-LAST:event_btn_contGerActionPerformed
+
+    private void btn_contFilhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_contFilhoActionPerformed
+        Config cfg = new Config();
+        if(ligaCtt == null){
+            ligaCtt = new Ligacao();
+            ligaCtt.Ctt(cfg.getContatos()[2]);
+            ligaCtt.setVisible(true);
+            setVisible(false);
+        }
+    }//GEN-LAST:event_btn_contFilhoActionPerformed
+
+    private void btn_contLurdesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_contLurdesActionPerformed
+        Config cfg = new Config();
+        if(ligaCtt == null){
+            ligaCtt = new Ligacao();
+            ligaCtt.Ctt(cfg.getContatos()[3]);
+            ligaCtt.setVisible(true);
+            setVisible(false);
+        }
+    }//GEN-LAST:event_btn_contLurdesActionPerformed
+
+    private void btn_contDrogaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_contDrogaActionPerformed
+        Config cfg = new Config();
+        if(ligaCtt == null){
+            ligaCtt = new Ligacao();
+            ligaCtt.Ctt(cfg.getContatos()[4]);
+            ligaCtt.setVisible(true);
+            setVisible(false);
+        }
+    }//GEN-LAST:event_btn_contDrogaActionPerformed
 
     /**
      * @param args the command line arguments

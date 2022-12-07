@@ -141,4 +141,7 @@ public class Ligacao extends javax.swing.JFrame {
     public void samu(String recebe) {
         lbl_num.setText(recebe);
     }
+    public void Ctt(String recebe) {
+        lbl_num.setText(recebe);
+    }
 }

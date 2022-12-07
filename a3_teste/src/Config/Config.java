@@ -7,18 +7,12 @@ public class Config {
     Atributos*/
     private int id;
     private String senha_usuario;
-    private String policia = "190"; // ligar para a policia
-    private String samu = "192";
+    private final String policia = "190"; // ligar para a policia
+    private final String samu = "192";
     private String mensagem;// enviar mensagens para os contatos
     private String escolha;
+    private final String[] contatos = {"Dona Creusa", "Gertrudes Fisio", "Clebinho Filho", "Lurdes Cabelo 1", "Farma Drogasil" };
 
-    /*public long[] getNumeros() {
-        return numeros;
-    }
-
-    public void setNumeros(long[] numeros) {
-        this.numeros = numeros;
-    }*/
     //Metodos acessores
     public int getId() {
         return id;
@@ -60,5 +54,7 @@ public class Config {
         return samu;
     }
 
-    //Construtores    
+    public String[] getContatos() {
+        return contatos;
+    }
 }
