@@ -10,7 +10,6 @@ public class Config {
     private String policia = "190"; // ligar para a policia
     private String samu = "192";
     private String mensagem;// enviar mensagens para os contatos
-    //private long numeros[] = new long[5];
     private String escolha;
 
     /*public long[] getNumeros() {
