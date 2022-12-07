@@ -1,10 +1,8 @@
 package Config;
 
 public class Config {
-
-    /*Escrever uma classe que contenha, no mínimo, seis atributos, sendo um deles obrigatoriamente *id (int)
     
-    Atributos*/
+    /*Atributos*/
     private int id;
     private String senha_usuario;
     private final String policia = "190"; // ligar para a policia
