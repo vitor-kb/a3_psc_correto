@@ -1,8 +1,5 @@
 package Telas;
 
-import Config.*;
-import java.util.Calendar;
-
 public class TelaLigar extends javax.swing.JFrame {
     public TelaLigar() {
         initComponents();

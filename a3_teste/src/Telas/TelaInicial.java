@@ -1,6 +1,6 @@
 package Telas;
 
-import Config.Config;
+import Config.*;
 
 public class TelaInicial extends javax.swing.JFrame {
 

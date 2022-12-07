@@ -1,16 +1,8 @@
 package Telas;
 
-import Config.Config;
+import Config.*;
 import java.util.Calendar;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-/**
- *
- * @author conta
- */
 public class Emergencia extends javax.swing.JFrame {
 
     Ligacao ligapolicia;

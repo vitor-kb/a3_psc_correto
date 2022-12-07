@@ -1,16 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Telas;
 
-/**
- *
- * @author Vitor
- */
 public class Ligacao extends javax.swing.JFrame {
 
-    
     public Ligacao() {
         initComponents();
         setLocationRelativeTo(null);
@@ -135,12 +126,15 @@ public class Ligacao extends javax.swing.JFrame {
     public void recebendo(String recebe) {
         lbl_num.setText(recebe);
     }
+
     public void policia(String recebe) {
         lbl_num.setText(recebe);
     }
+
     public void samu(String recebe) {
         lbl_num.setText(recebe);
     }
+
     public void Ctt(String recebe) {
         lbl_num.setText(recebe);
     }

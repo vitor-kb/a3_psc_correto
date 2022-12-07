@@ -1,18 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Telas;
 
 import java.util.Calendar;
 
-/**
- *
- * @author Vitor
- */
 public class Mensagem extends javax.swing.JFrame {
 
     TelaInicial enviaHorario;
+
     public Mensagem() {
         initComponents();
         setLocationRelativeTo(null);
