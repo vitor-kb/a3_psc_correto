@@ -1,7 +1,7 @@
 package Config;
 
 public class Config {
-    
+
     /*Atributos*/
     private int id;
     private String senha_usuario;
@@ -9,7 +9,13 @@ public class Config {
     private final String samu = "192";
     private String mensagem;// enviar mensagens para os contatos
     private String escolha;
-    private final String[] contatos = {"Dona Creusa", "Gertrudes Fisio", "Clebinho Filho", "Lurdes Cabelo 1", "Farma Drogasil" };
+    private final String[] contatos = {
+        "Dona Creusa",
+        "Gertrudes Fisio",
+        "Clebinho Filho",
+        "Lurdes Cabelo 1",
+        "Farma Drogasil"
+    };
 
     //Metodos acessores
     public int getId() {
